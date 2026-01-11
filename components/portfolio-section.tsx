@@ -44,7 +44,7 @@ const portfolioImages = [
 const categories = ["Todos", "Retratos", "Paisajes", "Documentales", "Eventos", "Moda", "Naturaleza"]
 
 export function PortfolioSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All")
+  const [selectedCategory, setSelectedCategory] = useState("Todos")
   const [hoveredId, setHoveredId] = useState<number | null>(null)
 
   const filteredImages =
