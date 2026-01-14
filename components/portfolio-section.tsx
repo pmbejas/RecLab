@@ -51,7 +51,7 @@ export function PortfolioSection() {
     selectedCategory === "Todos" ? portfolioImages : portfolioImages.filter((img) => img.category === selectedCategory)
 
   return (
-    <section id="portfolio" className="py-32 bg-background relative overflow-hidden">
+    <section id="portfolio" className="py-15 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/3 blur-3xl rounded-full" />
       

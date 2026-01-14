@@ -52,7 +52,7 @@ export function ContactSection() {
   ]
 
   return (
-    <section id="contacto" className="py-32 bg-background relative overflow-hidden">
+    <section id="contacto" className="py-15 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/2 right-0 w-1/3 h-1/3 bg-primary/3 blur-3xl rounded-full" />
       

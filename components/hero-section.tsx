@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex justify-center overflow-hidden mt-0 pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -19,12 +19,12 @@ export function HeroSection() {
       </div>
 
       {/* Geometric Shapes */}
-      <div className="absolute inset-0 pointer-events-none opacity-10 z-">
+{/*       <div className="absolute inset-0 pointer-events-none opacity-10 z-">
         <div className="absolute top-20 left-10 w-2 h-2 border border-primary rotate-45" />
         <div className="absolute top-40 right-20 w-3 h-3 border border-primary" />
         <div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 border border-primary rotate-45" />
         <div className="absolute bottom-20 right-1/3 w-2.5 h-2.5 border border-primary" />
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,7 +92,7 @@ export function HeroSection() {
       </div> */}
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
+      <div className="absolute bottom-30 left-1/2 -translate-x-1/2">
         <div className="w-0.5 h-16 bg-linear-to-b from-secondary to-transparent animate-scrollPulse" />
       </div>
 
