@@ -57,7 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.variable}>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased bg-black">
         {children}
         <Analytics />
       </body>

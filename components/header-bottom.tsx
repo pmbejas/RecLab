@@ -69,7 +69,7 @@ export function HeaderBottom() {
           </div>
 
           {/* Social Icons - Centered on Mobile */}
-          <div className="flex items-center gap-10 md:gap-6 md:flex-1 md:justify-end absolute left-1/2 -translate-x-1/2 md:relative md:left-auto md:translate-x-0">
+          <div className="flex items-center gap-6 md:gap-6 md:flex-1 md:justify-end absolute left-1/2 -translate-x-1/2 md:relative md:left-auto md:translate-x-0">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
