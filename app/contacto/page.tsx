@@ -6,18 +6,15 @@ import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { FloatingNav } from "@/components/floating-nav"
 
-export default function Home() {
+export default function Contacto() {
   return (
     <div className="min-h-screen">
       <Header />
       <FloatingNav />
       <main className="relative">
-        <HeroSection />
-{/*         <PortfolioSection />
-        <AboutSection />
-        <ContactSection /> */}
+        <ContactSection />
       </main>
-{/*       <Footer /> */}
+      <Footer />
     </div>
   )
 }

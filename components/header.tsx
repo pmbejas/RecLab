@@ -39,7 +39,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
-            {["Portfolio", "Nosotros", "Contacto"].map((item) => (
+            {["Instagram", "Facebook", "TikTok"].map((item) => (
               <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}

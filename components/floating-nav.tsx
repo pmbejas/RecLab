@@ -34,8 +34,8 @@ export function FloatingNav() {
 
   return (
     <nav className="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
-      <div className="w-5/6 bg-white rounded-full shadow-2xl border border-gray-200">
-        <div className="flex items-center justify-around px-4 py-3">
+      <div className="w-6/7 bg-white rounded-full shadow-2xl border border-gray-200">
+        <div className="flex items-center justify-center px-4 py-3">
           {menuItems.map((item) => {
             const active = isActive(item.href)
             return (
@@ -51,7 +51,7 @@ export function FloatingNav() {
                 <item.icon className={`w-5 h-5 transition-transform duration-300 ${
                   active ? "scale-110" : "group-hover:scale-110"
                 }`} />
-                <span className={`text-xs font-medium tracking-wide uppercase transition-all duration-300 ${
+                <span className={`text-xs font-light tracking-wide uppercase transition-all duration-300 ${
                   active ? "opacity-100" : "opacity-70 group-hover:opacity-100"
                 }`}>
                   {item.name}
