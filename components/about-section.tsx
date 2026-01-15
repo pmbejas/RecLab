@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 export function AboutSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -30,19 +31,23 @@ export function AboutSection() {
   ]
 
   return (
-    <section ref={sectionRef} id="nosotros" className="py-15 bg-muted/20 relative overflow-hidden">
+    <section ref={sectionRef} id="nosotros" className="py-25 bg-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-primary/3 blur-3xl rounded-full" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          {/* Image Side */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-40">
+        <div className={`flex items-center gap-6 mb-6 transition-all duration-700 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+            }`}>
+            <div className="w-12 h-0.5 bg-primary" />
+            <span className="text-sm tracking-[0.3em] uppercase text-muted-foreground">sobre Nosotros</span>
+          </div>
+        <div className="grid lg:grid-cols-2 gap-5 lg:gap-24 items-center">
           <div className="relative">
             {/* Main Image */}
             <div className="relative aspect-3/4 overflow-hidden">
               <img
                 src="/photographer-portrait.png"
-                alt="About Alex Morgan"
+                alt="About Rec Lab"
                 className={`w-full h-full object-cover transition-all duration-1000 ${isVisible ? "scale-100 opacity-100" : "scale-110 opacity-0"
                   }`}
               />
@@ -62,15 +67,16 @@ export function AboutSection() {
           </div>
 
           {/* Content Side */}
-          <div className="space-y-8">
+          <div className="space-y-3 mt-10 lg:mt-0">
             {/* Header */}
-            <div>
-              <div className={`flex items-center gap-6 mb-6 transition-all duration-700 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
-                }`}>
-                <div className="w-12 h-0.5 bg-primary" />
-                <span className="text-sm tracking-[0.3em] uppercase text-muted-foreground">sobre Nosotros</span>
-              </div>
-
+            <div className="flex flex-col">
+              <Image
+                src="/assets/logo-reclab-oscuro.png"
+                alt="RecLab Logo"
+                width={150}
+                height={50}
+                className="pb-10 object-contain mx-auto"
+              />
               <h2 className={`text-5xl sm:text-6xl font-extralight tracking-tight mb-8 transition-all duration-700 delay-100 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
                 }`}>
                 Visual Storytelling
@@ -78,7 +84,7 @@ export function AboutSection() {
             </div>
 
             {/* Text Content */}
-            <div className={`space-y-6 transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            <div className={`space-y-4 transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Somos RecLab, un estudio de narración visual apasionado por capturar momentos auténticos y crear relatos visuales impactantes a través de la fotografía y video.

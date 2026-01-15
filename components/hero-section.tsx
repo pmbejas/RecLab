@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen flex justify-center overflow-hidden mt-0 pt-20">
+    <section className="relative h-screen flex justify-center overflow-hidden mt-0 pt-35">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -18,17 +18,9 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-linear-to-r from-background/5 via-transparent to-background/50" /> */}
       </div>
 
-      {/* Geometric Shapes */}
-{/*       <div className="absolute inset-0 pointer-events-none opacity-10 z-">
-        <div className="absolute top-20 left-10 w-2 h-2 border border-primary rotate-45" />
-        <div className="absolute top-40 right-20 w-3 h-3 border border-primary" />
-        <div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 border border-primary rotate-45" />
-        <div className="absolute bottom-20 right-1/3 w-2.5 h-2.5 border border-primary" />
-      </div> */}
-
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
+        <div className="flex flex-col gap-3 max-w-5xl mx-auto">
           {/* Small Label */}
           <div className="mb-8 overflow-hidden">
             <div className="inline-block animate-slideUp">
@@ -60,7 +52,7 @@ export function HeroSection() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 animate-slideUp" style={{ animationDelay: "0.4s" }}>
+{/*           <div className="flex flex-col sm:flex-row gap-6 animate-slideUp" style={{ animationDelay: "0.4s" }}>
             <Link href="#portfolio">
               <Button 
                 size="lg" 
@@ -80,20 +72,8 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-muted-foreground/80 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </Button>
             </Link>
-          </div>
+          </div> */}
         </div>
-      </div>
-
-      {/* Vertical Text */}
-{/*       <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2">
-        <div className="writing-mode-vertical text-sm tracking-[0.3em] uppercase text-muted-foreground/50">
-          Scroll para explorar
-        </div>
-      </div> */}
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-30 left-1/2 -translate-x-1/2">
-        <div className="w-0.5 h-16 bg-linear-to-b from-secondary to-transparent animate-scrollPulse" />
       </div>
 
       <style jsx>{`

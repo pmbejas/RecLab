@@ -1,20 +1,15 @@
 import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
-import { PortfolioSection } from "@/components/portfolio-section"
 import { AboutSection } from "@/components/about-section"
-import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { FloatingNav } from "@/components/floating-nav"
-import { WhatsAppButton } from "@/components/whatsapp-button"
 
-export default function Contacto() {
+export default function SobreNosotros() {
   return (
     <div className="min-h-screen">
       <Header />
       <FloatingNav />
       <main className="relative">
-        <ContactSection />
-        <WhatsAppButton />
+        <AboutSection />
       </main>
       <Footer />
     </div>
