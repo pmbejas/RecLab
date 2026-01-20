@@ -82,7 +82,6 @@ export function AboutSection() {
                 Visual Storytelling
               </h2>
             </div>
-
             {/* Text Content */}
             <div className={`space-y-4 transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}>
