@@ -31,7 +31,7 @@ export function AboutSection() {
   ]
 
   return (
-    <section ref={sectionRef} id="nosotros" className="py-25 bg-white relative overflow-hidden">
+    <section ref={sectionRef} id="nosotros" className="py-25 relative overflow-hidden bg-red-50">
       {/* Background Elements */}
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-primary/3 blur-3xl rounded-full" />
 

@@ -1,5 +1,11 @@
+
 @import "tailwindcss";
 @import "tw-animate-css";
+
+.font-shadows {
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
 
 @custom-variant dark (&:is(.dark *));
 

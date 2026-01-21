@@ -51,24 +51,20 @@ export function PortfolioSection() {
     selectedCategory === "Todos" ? portfolioImages : portfolioImages.filter((img) => img.category === selectedCategory)
 
   return (
-    <section id="portfolio" className="py-30 bg-background relative overflow-hidden">
+    <section id="portfolio" className="py-20 md:py-30 relative overflow-hidden bg-blue-100">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/3 blur-3xl rounded-full" />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-40">
         {/* Header */}
-        <div className="mb-20">
-          <div className="flex items-center gap-8 mb-4">
-            <div className="w-12 h-0.5 bg-primary" />
-            <span className="text-sm tracking-[0.3em] uppercase text-muted-foreground">Trabajos Seleccionados</span>
-          </div>
+        <div className="mb-5 md:mb-10">
           <h2 className="text-5xl sm:text-6xl md:text-7xl font-extralight tracking-tight">
             Portfolio
           </h2>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap gap-3 mb-16">
+        <div className="hidden md:flex flex-wrap gap-3 mb-16">
           {categories.map((category) => (
             <button
               key={category}
@@ -92,7 +88,7 @@ export function PortfolioSection() {
         </div>
 
         {/* Image Grid - Asymmetric Layout */}
-        <div className="grid grid-cols-12 gap-3 md:gap-5 px-0 md:px-20 items-center">
+        <div className="grid grid-cols-12 gap-3 md:gap-5 px-0 items-center w-full">
           {filteredImages.map((image, index) => {
             const isLarge = index % 5 === 0
             const isMedium = index % 4 === 0 && !isLarge
@@ -104,12 +100,13 @@ export function PortfolioSection() {
                   isLarge 
                     ? "col-span-12 md:col-span-7 row-span-1" 
                     : isMedium
-                    ? "col-span-12 sm:col-span-6 md:col-span-4"
+                    ? "col-span-12 sm:col-span-4 md:col-span-5"
                     : "col-span-12 sm:col-span-4 md:col-span-3"
                 }`}
                 onMouseEnter={() => setHoveredId(image.id)}
                 onMouseLeave={() => setHoveredId(null)}
               >
+                <p className="text-lg tracking-[0.3em] uppercase text-primary pb-1 pt-5 bg-none md:hidden">{image.category}</p>
                 <div className={`relative overflow-hidden bg-muted ${
                   isLarge ? "aspect-16/10" : "aspect-4/5"
                 }`}>

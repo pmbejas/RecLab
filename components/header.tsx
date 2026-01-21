@@ -12,7 +12,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      setScrolled(window.scrollY > 5)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -40,7 +40,7 @@ export function Header() {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled 
-          ? "bg-background/60 backdrop-blur-xl text-foreground"  
+          ? "bg-transparent/30 backdrop-blur-2xl text-foreground"  
           : "bg-transparent text-secondary"
       }`}
     >
