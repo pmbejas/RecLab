@@ -4,7 +4,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    // unoptimized: true, // Outputting locally for now
   },
   allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
 }

@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Pacifico } from "next/font/google";
 import { CurvedArrow } from "@/components/site/arrow";
 
@@ -34,16 +35,26 @@ export function HeroCollage() {
                         }}
                         className="relative z-10"
                     >
-                        <img
-                            src="/assets/hero/collage-vertical.png"
-                            alt="Hero background"
-                            className="md:hidden object-cover max-h-screen md:px-0"
-                        />
-                        <img
-                            src="/assets/hero/collage-horizontal.png"
-                            alt="Hero background"
-                            className="hidden md:block object-cover"
-                        />
+                        <div className="md:hidden relative w-full h-full max-h-screen">
+                            <Image
+                                src="/assets/hero/collage-vertical.png"
+                                alt="Hero background"
+                                width={1000}
+                                height={1500}
+                                className="object-cover w-full h-auto"
+                                priority
+                            />
+                        </div>
+                        <div className="hidden md:block relative w-full h-full">
+                            <Image
+                                src="/assets/hero/collage-horizontal.png"
+                                alt="Hero background"
+                                width={1920}
+                                height={1080}
+                                className="object-cover w-full h-auto"
+                                priority
+                            />
+                        </div>
                     </motion.div>
 
                     {/* VIDEO 1 */}
