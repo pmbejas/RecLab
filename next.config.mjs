@@ -7,6 +7,7 @@ const nextConfig = {
     // unoptimized: true, // Outputting locally for now
   },
   allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
+  output: 'export',
 }
 
 export default nextConfig
