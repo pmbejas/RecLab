@@ -32,24 +32,14 @@ export function Header() {
     {
       icon: <Instagram />,
       nombre: "@rec.lab",
-      href: "https://www.instagram.com/rec.lab/"
-    },
-    {
-      icon: <Facebook />,
-      nombre: "@rec.lab",
-      href: "https://www.facebook.com/rec.lab/"
-    },
-    {
-      icon: <Youtube />,
-      nombre: "@rec.lab",
-      href: "https://www.instagram.com/rec.lab/"
+      href: "https://www.instagram.com/rec.lab.709/"
     },
   ]
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-          ? "bg-transparent/30 backdrop-blur-2xl text-foreground"
-          : "bg-transparent text-secondary"
+        ? "bg-transparent/30 backdrop-blur-2xl text-foreground"
+        : "bg-transparent text-secondary"
         }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,10 +66,10 @@ export function Header() {
             {redes.map((item) => (
               <Link
                 key={item.nombre}
-                href={`#${item.href.toLowerCase()}`}
+                href={item.href.toLowerCase()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative tracking-wider uppercase group font-light text-lg"
+                className="relative tracking-wider uppercase group text-black text-lg"
               >
                 <span className="transition-colors duration-100">
                   {item.icon}
@@ -106,7 +96,7 @@ export function Header() {
             {redes.map((item, i) => (
               <Link
                 key={item.nombre}
-                href={`#${item.href.toLowerCase()}`}
+                href={item.href.toLowerCase()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-3 flex text-lg gap-2 tracking-wider uppercase text-muted-foreground hover:text-foreground transition-all duration-300"

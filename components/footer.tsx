@@ -5,9 +5,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Instagram, href: "https://instagram.com/rec.lab.709", label: "Instagram" },
     { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   ]
 
@@ -28,7 +27,7 @@ export function Footer() {
     <footer className="bg-background border-t border-border relative overflow-hidden">
       {/* Background Element */}
       <div className="absolute top-0 left-0 w-1/2 h-full bg-primary/2 blur-3xl" />
-      
+
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
@@ -53,8 +52,8 @@ export function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="group inline-block text-foreground hover:text-primary transition-colors duration-300 relative"
                   >
                     <span className="text-sm">{link.label}</span>
